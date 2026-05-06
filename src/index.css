@@ -1,0 +1,113 @@
+/* ===== CSS Variables (Green & Yellow - Kindergarten Theme) ===== */
+:root {
+  --primary: #f9a825;        /* Warm yellow */
+  --primary-dark: #f57f17;
+  --accent: #66bb6a;         /* Green */
+  --accent-light: #81c784;
+  --accent-blue: #42a5f5;    /* Sky blue */
+  --accent-pink: #ec407a;    /* Pink */
+  --accent-purple: #ab47bc;  /* Purple */
+  --light: #f1f8e9;          /* Light green bg */
+  --light-yellow: #fff8e1;   /* Light yellow bg */
+  --dark: #2e7d32;           /* Dark green text */
+  --gray: #689f38;
+  --white: #ffffff;
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow: 0 4px 20px rgba(102, 187, 106, 0.15);
+  --shadow-lg: 0 8px 40px rgba(102, 187, 106, 0.2);
+}
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Reveal Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.reveal-left { transform: translateX(-60px); }
+.reveal-right { transform: translateX(60px); }
+.reveal-left.revealed,
+.reveal-right.revealed { transform: translate(0); }
+
+/* ===== Floating Background Elements ===== */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.float-item {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-1 { top: 15%; left: 8%; animation-delay: 0s; }
+.float-2 { top: 25%; right: 12%; animation-delay: 1s; }
+.float-3 { bottom: 30%; left: 15%; animation-delay: 2s; }
+.float-4 { bottom: 20%; right: 20%; animation-delay: 3s; }
+.float-5 { top: 50%; left: 50%; animation-delay: 1.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* ===== Pulse Animation ===== */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249, 168, 37, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(249, 168, 37, 0); }
+}
+
+/* ===== Typing Cursor ===== */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===== Utility ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
