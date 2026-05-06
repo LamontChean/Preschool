@@ -313,6 +313,18 @@ function App() {
               <h4>Contact Us</h4>
               <p>📍 Jade Hills, Kajang, Selangor</p>
               <p>📱 011-6680 0882</p>
+              <div className="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.3148!2d101.7584!3d2.9926464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdcb59990cb31d%3A0x5029ebb445c2c673!2sLittle%20Glory%20Preschool!5e0!3m2!1sen!2smy!4v1234567890"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Little Glory Preschool Location"
+                ></iframe>
+              </div>
             </div>
             <div className="footer-social">
               <h4>Follow Us</h4>

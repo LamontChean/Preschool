@@ -165,7 +165,7 @@ function Career() {
               { icon: '🌱', title: 'Grow With Us', desc: 'Continuous professional development and career advancement opportunities' },
               { icon: '❤️', title: 'Supportive Culture', desc: 'Friendly, collaborative team that values your wellbeing' },
               { icon: '🎓', title: 'Make an Impact', desc: 'Shape young minds and create lasting positive change' },
-              { icon: '', title: 'Recognition', desc: 'Your hard work is valued and rewarded' },
+              { icon: '🏆', title: 'Recognition', desc: 'Your hard work is valued and rewarded' },
             ].map((item, i) => (
               <Reveal key={i} delay={i * 100}>
                 <div className="benefit-card">

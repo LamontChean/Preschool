@@ -175,6 +175,10 @@
   box-shadow: var(--shadow);
   text-align: center;
   transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 280px;
 }
 
 .benefit-card:hover {
@@ -185,17 +189,25 @@
 .benefit-icon {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefit-card h3 {
   font-size: 1.3rem;
   color: var(--dark);
   margin-bottom: 1rem;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .benefit-card p {
   color: var(--gray);
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 /* CTA */

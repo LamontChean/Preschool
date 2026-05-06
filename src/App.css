@@ -498,7 +498,7 @@ section {
 
 /* ===== Footer ===== */
 .footer {
-  background: var(--dark);
+  background: #1b5e20;
   color: var(--white);
   padding: 3rem 0 2rem;
 }
@@ -514,10 +514,11 @@ section {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: var(--white);
 }
 
 .footer-brand p {
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer h4 {
@@ -527,7 +528,7 @@ section {
 }
 
 .footer-contact p {
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 0.5rem;
 }
 
@@ -563,8 +564,21 @@ section {
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--gray);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
 }
 
 /* ===== Mobile Responsive ===== */
