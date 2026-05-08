@@ -26,26 +26,8 @@ async function main() {
   const sitemapRaw = fs.readFileSync(publicSitemap, 'utf8')
   let sitemap = sitemapRaw
 
-  // If package.json has homepage, replace any existing hostnames with that hostname.
-  const homepage = readPackageHomepage()
-  if (homepage) {
-    try {
-      const url = new URL(homepage)
-      const hostname = url.origin + (url.pathname.endsWith('/') ? url.pathname.slice(0, -1) : url.pathname)
-      // Replace any occurrences of previous hostnames (simple heuristic)
-      sitemap = sitemap.replace(/https?:\/\/[^\/<\"]+\/[A-Za-z0-9_\-\/]*?/g, (match) => {
-        // keep path from the match
-        try {
-          const m = new URL(match)
-          return hostname + m.pathname
-        } catch (e) {
-          return match
-        }
-      })
-    } catch (e) {
-      // ignore
-    }
-  }
+  // Simply copy as-is; sitemap.xml in public/ should already have correct URLs
+  // (we manually maintain public/sitemap.xml with the right hostname and paths)
 
   // Ensure dist directory exists
   fs.mkdirSync(path.dirname(distSitemap), { recursive: true })
