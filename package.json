@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
+    "postbuild": "node scripts/copy-sitemap.js",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

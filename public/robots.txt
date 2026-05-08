@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://LamontChean.github.io/Preschool/sitemap.xml
