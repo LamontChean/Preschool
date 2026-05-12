@@ -25,7 +25,7 @@ function RoutingHandler() {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/Preschool">
+    <BrowserRouter basename="/">
       <RoutingHandler />
       <Routes>
         <Route path="/" element={<App />} />
